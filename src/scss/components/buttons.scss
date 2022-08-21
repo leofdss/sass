@@ -1,0 +1,42 @@
+@import "../core";
+
+$buttons-color: "primary""secondary""error";
+
+@mixin default-button {
+  border: none;
+  margin: 0px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  min-width: 50px;
+}
+
+@mixin button-active($color) {
+  transition: 0.5s;
+  &:active {
+    background-color: mix($color, #fff);
+  }
+}
+
+@each $button-color in $buttons-color {
+  .stroked-button[color="#{$button-color}"] {
+    @include themify() using ($theme) {
+      $color: get-color($theme, $button-color);
+      @include default-button;
+      @include button-active($color);
+      color: $color;
+      border: $color solid 1px;
+    }
+  }
+  .flat-button[color="#{$button-color}"] {
+    @include themify() using ($theme) {
+      $color: get-color($theme, $button-color);
+      @include default-button;
+      @include button-active($color);
+      border: $color solid 1px;
+      background-color: $color;
+      color: get-text-color($color);
+    }
+  }
+}

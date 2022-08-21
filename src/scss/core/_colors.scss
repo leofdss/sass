@@ -1,7 +1,3 @@
-@use "sass:color";
-@use "sass:map";
-@use "sass:list";
-
 $primary: #6200ee;
 $secondary: #03dac6;
 $error: #b00020;
@@ -26,14 +22,14 @@ $themes: (
 );
 
 @function get-text-color($color: $primary) {
-  @if color.lightness($color)>70 {
+  @if lightness($color)>70 {
     @return #333;
   }
   @return #fff;
 }
 
 @function get-color($theme, $type: "primary") {
-  @return map.get($theme, $type);
+  @return map-get($theme, $type);
 }
 
 @mixin themify() {
