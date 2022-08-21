@@ -1,0 +1,46 @@
+@use "sass:color";
+@use "sass:map";
+@use "sass:list";
+
+$primary: #6200ee;
+$secondary: #03dac6;
+$error: #b00020;
+
+$light-theme: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "background": #fff
+);
+
+$dark-theme: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "background": #191919
+);
+
+$themes: (
+  "light": $light-theme,
+  "dark": $dark-theme
+);
+
+@function get-text-color($color: $primary) {
+  @if color.lightness($color)>70 {
+    @return #333;
+  }
+  @return #fff;
+}
+
+@function get-color($theme, $type: "primary") {
+  @return map.get($theme, $type);
+}
+
+@mixin themify() {
+  @each $name,
+  $theme in $themes {
+    .#{$name}-theme & {
+      @content($theme);
+    }
+  }
+}
