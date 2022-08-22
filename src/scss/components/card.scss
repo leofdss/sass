@@ -5,6 +5,22 @@
   width: max-content;
   padding: 10px;
 
+  h1 {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(105%);
+  }
+
   @include themify() using ($theme) {
     $color: get-color($theme, "background");
     $font-color: get-text-color($color);

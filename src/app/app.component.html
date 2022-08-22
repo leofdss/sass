@@ -1,5 +1,6 @@
 <div style="width: 100vw; height: 100vh;" class="{{ theme }}-theme">
   <div style="width: 100%; height: 100%;" class="background">
+
     <header class="toolbar">
       <span>
         <h1>
@@ -16,9 +17,27 @@
       </button>
     </header>
 
-    <input class="input-outline" placeholder="Search..." />
+    <main>
+      <input class="input-outline" placeholder="Search..." />
 
-    <div class="card">
+      <div class="list-card">
+        <article class="card">
+          <h1>Título do artigo 1</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+        </article>
+        <article class="card">
+          <h1>Título do artigo 2</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+        </article>
+        <article class="card">
+          <h1>Título do artigo 3</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+        </article>
+      </div>
+
+    </main>
+
+    <footer>
       <button class="stroked-button" color="primary">
         stroked primary
       </button>
@@ -34,6 +53,6 @@
       <button class="flat-button" color="secondary">
         flat secondary
       </button>
-    </div>
+    </footer>
   </div>
 </div>
