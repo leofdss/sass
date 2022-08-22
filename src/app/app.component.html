@@ -1,58 +1,71 @@
-<div style="width: 100vw; height: 100vh;" class="{{ theme }}-theme">
-  <div style="width: 100%; height: 100%;" class="background">
-
-    <header class="toolbar">
-      <span>
-        <h1>
-          Título
-        </h1>
-        <h2>
-          Subtítulo
-        </h2>
-      </span>
-      <button class="fab-button" color="primary" (click)="changeTheme()">
-        <span class="material-symbols-outlined">
-          {{ theme }}_mode
+<div style="width: 100vw; height: 100vh" class="{{ theme }}-theme">
+  <div style="width: 100%; height: 100%" class="background">
+    <header class="header">
+      <div class="toolbar">
+        <span>
+          <h1>Título</h1>
+          <h2>Subtítulo</h2>
         </span>
-      </button>
+
+        <button class="fab-button" color="primary" (click)="changeTheme()">
+          <span class="material-symbols-outlined"> {{ theme }}_mode </span>
+        </button>
+      </div>
     </header>
 
-    <main>
+    <nav class="navigator">
+      <ul>
+        <li>
+          <a>
+            <button class="flat-button" color="primary">Página inicial</button>
+          </a>
+        </li>
+        <li>
+          <a>
+            <button class="stroked-button" color="primary">Sobre nós</button>
+          </a>
+        </li>
+        <li>
+          <a>
+            <button class="stroked-button" color="primary">Contato</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main">
       <input class="input-outline" placeholder="Search..." />
 
       <div class="list-card">
         <article class="card">
           <h1>Título do artigo 1</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod ...
+          </p>
         </article>
         <article class="card">
           <h1>Título do artigo 2</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod ...
+          </p>
         </article>
         <article class="card">
           <h1>Título do artigo 3</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod ...
+          </p>
         </article>
       </div>
-
     </main>
 
-    <footer>
-      <button class="stroked-button" color="primary">
-        stroked primary
-      </button>
-
-      <button class="flat-button" color="primary">
-        flat primary
-      </button>
-
-      <button class="flat-button" color="error">
-        flat error
-      </button>
-
-      <button class="flat-button" color="secondary">
-        flat secondary
-      </button>
+    <footer class="footer">
+      <button class="stroked-button" color="primary">stroked primary</button>
+      <button class="flat-button" color="primary">flat primary</button>
+      <button class="flat-button" color="error">flat error</button>
+      <button class="flat-button" color="secondary">flat secondary</button>
     </footer>
   </div>
 </div>

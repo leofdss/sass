@@ -1,0 +1,33 @@
+@import "../core/";
+
+.navigator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  @include themify() using ($theme) {
+    $color: get-color($theme, "background");
+    $text-color: get-text-color($color);
+    border-bottom: $text-color solid 1px;
+  }
+
+  ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    li {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+}
