@@ -15,7 +15,7 @@ export class AppComponent {
 
   theme: theme = theme.light;
 
-  changeTheme() {
+  changeTheme(): void {
     if(this.theme === theme.light) {
       this.theme = theme.dark;
     } else {
