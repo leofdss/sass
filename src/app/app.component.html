@@ -4,10 +4,13 @@
       asdasd
       <button class="fab-button" color="primary" (click)="changeTheme()">
         <span class="material-symbols-outlined">
-          dark_mode
+          {{ theme }}_mode
         </span>
       </button>
     </div>
+
+    <input class="input-outline" placeholder="Search..." />
+
     <div class="card">
       <button class="stroked-button" color="primary">
         stroked primary

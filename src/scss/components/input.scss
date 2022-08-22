@@ -1,14 +1,17 @@
 @import "../core";
 
-.card {
+.input-outline {
   @include themify() using ($theme) {
     $color: get-color($theme, "background");
     $font-color: get-text-color($color);
 
-    background-color: mix($color, $font-color, 90%);
-    padding: 10px;
-    width: max-content;
+    color: $font-color;
+    font-family: $font-family;
+    background: transparent;
+    min-width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
     border: mix($color, $font-color, 80%) solid 1px;
-    border-radius: 10px;
+    border-radius: 4px;
   }
 }
