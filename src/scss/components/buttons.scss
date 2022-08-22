@@ -16,6 +16,7 @@ $buttons-color: "primary""secondary""error";
 
 @mixin button-active($color) {
   transition: 0.5s;
+
   &:active {
     background-color: mix($color, #fff);
   }
@@ -31,6 +32,7 @@ $buttons-color: "primary""secondary""error";
       border: $color solid 1px;
     }
   }
+
   .flat-button[color="#{$button-color}"] {
     @include themify() using ($theme) {
       $color: get-color($theme, $button-color);

@@ -1,0 +1,15 @@
+@import "../core";
+
+.toolbar {
+  @include themify() using ($theme) {
+    $color: get-color($theme, "background");
+    $font-color: get-text-color($color);
+    background-color: mix($color, $font-color, 90%);
+    padding: 10px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
