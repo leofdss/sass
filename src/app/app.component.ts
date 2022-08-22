@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+enum theme {
+  light = "light",
+  dark = "dark"
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +12,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sass';
+
+  theme: theme = theme.light;
+
+  changeTheme() {
+    if(this.theme === theme.light) {
+      this.theme = theme.dark;
+    } else {
+      this.theme = theme.light;
+    }
+  }
 }
