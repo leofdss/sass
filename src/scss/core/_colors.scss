@@ -22,10 +22,12 @@ $themes: (
 );
 
 @function get-text-color($color: $primary) {
-  @if lightness($color)>70 {
+  @if lightness($color) > 70 {
     @return #333;
   }
-  @return #fff;
+  @else {
+    @return #fff;
+  }
 }
 
 @function get-color($theme, $type: "primary") {

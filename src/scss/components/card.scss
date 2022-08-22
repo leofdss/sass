@@ -1,0 +1,13 @@
+@import "../core";
+
+.card {
+  @include themify() using ($theme) {
+    $color: get-color($theme, "background");
+    $font-color: get-text-color($color);
+    background-color: mix($color, $font-color, 90%);
+    padding: 10px;
+    width: max-content;
+    border: mix($color, $font-color, 80%) solid 1px;
+    border-radius: 10px;
+  }
+}
