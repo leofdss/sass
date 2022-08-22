@@ -1,11 +1,13 @@
 @import "../core";
 
 .background {
+  font-size: medium;
+
   @include themify() using ($theme) {
     $color: get-color($theme, "background");
+
     background-color: $color;
     color: get-text-color($color);
     font-family: $font-family;
-    font-size: medium;
   }
 }
