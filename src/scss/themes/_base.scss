@@ -1,3 +1,29 @@
+$colors: "primary" "secondary" "error";
+
+@mixin button {
+  @each $color in $colors {
+    .flat-button[color="#{$color}"],
+    .stroked-button[color="#{$color}"],
+    .fab-button[color="#{$color}"] {
+      &:active {
+        background-color: var(--#{$color});
+      }
+    }
+
+    .flat-button[color="#{$color}"],
+    .fab-button[color="#{$color}"] {
+      border: var(--#{$color}) solid 1px;
+      background-color: var(--#{$color});
+      color: var(--#{$color}-text);
+    }
+
+    .stroked-button[color="#{$color}"] {
+      color: var(--#{$color});
+      border: var(--#{$color}) solid 1px;
+    }
+  }
+}
+
 .page {
   --primary: #6200ee;
   --primary-text: #fff;
@@ -8,42 +34,5 @@
   --error: #b00020;
   --error-text: #fff;
 
-  .flat-button[color="secondary"],
-  .stroked-button[color="secondary"],
-  .fab-button[color="secondary"] {
-    &:active {
-      background-color: var(--secondary);
-    }
-  }
-
-  .flat-button[color="primary"],
-  .stroked-button[color="primary"],
-  .fab-button[color="primary"] {
-    &:active {
-      background-color: var(--primary);
-    }
-  }
-
-  .flat-button[color="primary"],
-  .fab-button[color="primary"] {
-    border: var(--primary) solid 1px;
-    background-color: var(--primary);
-    color: var(--primary-text);
-  }
-
-  .flat-button[color="secondary"] .fab-button[color="primary"] {
-    border: var(--secondary) solid 1px;
-    background-color: var(--secondary);
-    color: var(--secondary-text);
-  }
-
-  .stroked-button[color="primary"] {
-    color: var(--primary);
-    border: var(--primary) solid 1px;
-  }
-
-  .stroked-button[color="secondary"] {
-    color: var(--secondary);
-    border: var(--secondary) solid 1px;
-  }
+  @include button;
 }
