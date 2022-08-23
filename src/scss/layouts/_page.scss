@@ -1,34 +1,131 @@
-.background {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-main {
+.page {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+
+  .stroked-button, .flat-button {
+    border: none;
+    margin: 0px;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    min-width: 50px;
+    font-size: medium;
+    transition: 0.5s;
+  }
+
+  .fab-button {
+    height: 40px;
+    width: 40px;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 20px;
+    font-size: medium;
+    transition: 0.5s;
+
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin: 10px 0px;
+  }
 
-    .list-card {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    
-        .card {
-            width: 200px;
-        }
-    }
-}
+  header {
+    padding: 10px;
+    height: 60px;
 
-footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 25px;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 15px;
+      margin: 0;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      ul {
+        list-style: none;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        li {
+          margin: 0;
+          padding: 0;
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    input {
+      border-radius: 4px;
+      background: transparent;
+      min-width: 200px;
+      padding: 12px 20px;
+      margin: 8px 0;
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      article {
+        border-radius: 10px;
+        width: max-content;
+        padding: 10px;
+        width: 200px;
+
+        h1 {
+          font-size: 25px;
+          margin: 0;
+        }
+
+        h2 {
+          font-size: 15px;
+          margin: 0;
+        }
+
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(105%);
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+  }
 }

@@ -13,7 +13,7 @@ enum theme {
 export class AppComponent {
   title = 'sass';
 
-  theme: theme = theme.light;
+  theme: theme = theme.dark;
 
   changeTheme(): void {
     if(this.theme === theme.light) {
