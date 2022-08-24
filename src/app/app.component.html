@@ -1,11 +1,11 @@
-<div class="{{ theme }}-theme">
+<div class="{{ theme }}-theme page">
   <div class="home">
     <header>
       <div>
         <h1>Título</h1>
         <h2>Subtitulo</h2>
       </div>
-      <button class="fab-button" color="primary" (click)="changeTheme()">
+      <button (click)="changeTheme()">
         <span class="material-symbols-outlined"> {{ theme }}_mode </span>
       </button>
     </header>
@@ -14,13 +14,13 @@
       <nav>
         <ul>
           <li>
-            <a class="flat-button" color="primary"> Página inicial </a>
+            <a> Página inicial </a>
           </li>
           <li>
-            <a class="stroked-button" color="primary"> Sobre nós </a>
+            <a> Sobre nós </a>
           </li>
           <li>
-            <a class="stroked-button" color="primary"> Contato </a>
+            <a> Contato </a>
           </li>
         </ul>
       </nav>
@@ -52,6 +52,8 @@
       </section>
     </main>
 
-    <footer>footer</footer>
+    <footer>
+      footer
+    </footer>
   </div>
 </div>

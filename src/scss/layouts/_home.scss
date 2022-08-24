@@ -1,53 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "../components";
 
 .home {
-  font-family: "Roboto", sans-serif;
-  height: 100%;
-
-  .stroked-button, .flat-button {
-    border: none;
-    margin: 0px;
-    padding: 10px;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 6px;
-    min-width: 50px;
-    font-size: medium;
-    transition: 0.5s;
-  }
-
-  .fab-button {
-    height: 40px;
-    width: 40px;
-    min-width: 30px;
-    min-height: 30px;
-    border-radius: 20px;
-    font-size: medium;
-    transition: 0.5s;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+  @extend %background;
 
   header {
-    padding: 10px;
-    height: 60px;
-
+    @extend %toolbar;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    h1 {
-      font-size: 25px;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: 15px;
-      margin: 0;
+    button {
+      @extend %button-round;
     }
   }
 
@@ -57,37 +21,31 @@
     align-items: center;
 
     nav {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      @extend %nav;
 
       ul {
-        list-style: none;
-
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 15px;
+        align-items: center;
+        justify-content: center;
 
         li {
-          margin: 0;
-          padding: 0;
-
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: center;
+
+          a {
+            @extend %button-rectangular;
+          }
         }
       }
     }
 
     input {
-      border-radius: 4px;
-      background: transparent;
-      min-width: 200px;
-      padding: 12px 20px;
-      margin: 8px 0;
+      @extend %input;
     }
 
     section {
@@ -99,26 +57,7 @@
       flex-wrap: wrap;
 
       article {
-        border-radius: 10px;
-        width: max-content;
-        padding: 10px;
-        width: 200px;
-
-        h1 {
-          font-size: 25px;
-          margin: 0;
-        }
-
-        h2 {
-          font-size: 15px;
-          margin: 0;
-        }
-
-        transition: 0.3s;
-
-        &:hover {
-          transform: scale(105%);
-        }
+        @extend %card;
       }
     }
   }

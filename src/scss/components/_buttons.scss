@@ -1,0 +1,50 @@
+%button-rectangular {
+  margin: 0px;
+  padding: 10px;
+  border-radius: 6px;
+  min-width: 50px;
+  font-size: medium;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  user-select: none;
+
+  color: var(--primary-text, #fff);
+  background-color: var(--primary, #000);
+
+  &:hover {
+    opacity: 50%;
+  }
+
+  &:active {
+    opacity: 20%;
+  }
+}
+
+%button-round {
+  border: none;
+  height: 40px;
+  width: 40px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 20px;
+  font-size: medium;
+  transition: 0.5s;
+  user-select: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--primary-text, #fff);
+  background-color: var(--primary, rgb(70, 70, 70));
+
+  &:hover {
+    opacity: 50%;
+  }
+
+  &:active {
+    opacity: 20%;
+  }
+}

@@ -1,30 +1,6 @@
-$colors: "primary" "secondary" "error";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-@mixin button {
-  @each $color in $colors {
-    .flat-button[color="#{$color}"],
-    .stroked-button[color="#{$color}"],
-    .fab-button[color="#{$color}"] {
-      &:active {
-        background-color: var(--#{$color});
-      }
-    }
-
-    .flat-button[color="#{$color}"],
-    .fab-button[color="#{$color}"] {
-      border: var(--#{$color}) solid 1px;
-      background-color: var(--#{$color});
-      color: var(--#{$color}-text);
-    }
-
-    .stroked-button[color="#{$color}"] {
-      color: var(--#{$color});
-      border: var(--#{$color}) solid 1px;
-    }
-  }
-}
-
-.home {
+%colors {
   --primary: #6200ee;
   --primary-text: #fff;
 
@@ -34,5 +10,5 @@ $colors: "primary" "secondary" "error";
   --error: #b00020;
   --error-text: #fff;
 
-  @include button;
+  font-family: "Roboto", sans-serif;
 }
