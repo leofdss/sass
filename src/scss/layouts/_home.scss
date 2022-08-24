@@ -1,17 +1,17 @@
 @import "../components";
 
 .home {
-  @extend %background;
+  @extend .background;
 
   header {
-    @extend %toolbar;
+    @extend .toolbar;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
     button {
-      @extend %button-round;
+      @extend .button-round;
     }
   }
 
@@ -21,7 +21,7 @@
     align-items: center;
 
     nav {
-      @extend %nav;
+      @extend .nav;
 
       ul {
         display: flex;
@@ -38,14 +38,14 @@
           justify-content: center;
 
           a {
-            @extend %button-rectangular;
+            @extend .button-rectangular;
           }
         }
       }
     }
 
     input {
-      @extend %input;
+      @extend .input;
     }
 
     section {
@@ -57,12 +57,13 @@
       flex-wrap: wrap;
 
       article {
-        @extend %card;
+        @extend .card;
       }
     }
   }
 
   footer {
+    @extend .footer;
     display: flex;
     flex-direction: row;
     justify-content: center;
